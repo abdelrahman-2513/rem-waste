@@ -2,7 +2,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { DarkModeProvider } from "./contexts/Darkmode";
 import AppRoutes from "./routes";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const queryClient = new QueryClient();
 function App() {
