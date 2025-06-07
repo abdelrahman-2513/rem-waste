@@ -14,7 +14,7 @@ export default defineConfig({
         target: "https://app.wewantwaste.co.uk",
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api/, "/api"),
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },
