@@ -1,6 +1,6 @@
 # Skip Selector Assessment
 
-A React-based skip bin selection app integrating with an external API, deployed on Vercel with a custom API proxy to handle CORS and improve security.
+A React application for skip bin selection that fully redesigns the original page with a fresh, modern UI while preserving all core functionality. The app emphasizes clean, maintainable React code and delivers a fully responsive experience optimized for both mobile browsers and desktop screens, enhancing overall UI/UX.
 
 ---
 
