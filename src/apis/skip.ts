@@ -1,7 +1,26 @@
-import type { ISkipQuery } from "../interfaces/skip";
+import type { ISkip, ISkipQuery } from "../interfaces/skip";
+// import axiosInstance from "./axios";
 
-// Mock data from your JSON array
-const mockSkips = [
+// async function fetchSkips(query: ISkipQuery) {
+//   const params = new URLSearchParams();
+
+//   if (query.postcode) params.append("postcode", query.postcode);
+//   if (query.area) params.append("area", query.area);
+
+//   const response = await axiosInstance.get(
+//     `skips/by-location?${params.toString()}`,
+//     {
+//       withCredentials: true,
+//     }
+//   );
+
+//   return response.data;
+// }
+
+// For Deployment on vercel due to CORS PROBLEMS
+
+
+const mockSkips : ISkip[]= [
   {
       "id": 17933,
       "size": 4,
@@ -148,16 +167,15 @@ const mockSkips = [
   }
 ];
 
-async function fetchSkips(query: ISkipQuery) {
-  const filteredData = mockSkips.filter((skip) => {
-    if (query.postcode && skip.postcode !== query.postcode) return false;
-    if (query.area && skip.area !== query.area) return false;
-    return true;
-  });
+async function fetchSkips(query: ISkipQuery):Promise<ISkip[]> {
+  console.log({query})
+
 
   return new Promise((resolve) => {
-    setTimeout(() => resolve(filteredData), 300); 
+    setTimeout(() => resolve(mockSkips), 300); 
   });
 }
+
+
 
 export default fetchSkips;
