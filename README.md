@@ -1,54 +1,92 @@
-# React + TypeScript + Vite
+# Skip Selector Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based skip bin selection app integrating with an external API, deployed on Vercel with a custom API proxy to handle CORS and improve security.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Project Overview](#project-overview)  
+- [Features](#features)  
+- [Tech Stack](#tech-stack)  
+- [Getting Started](#getting-started)  
+- [Project Structure](#project-structure)  
+- [API Proxy Setup](#api-proxy-setup)  
+- [Deployment](#deployment)  
+- [Known Issues](#known-issues)  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Overview
+
+This project allows users to browse and select skip bins based on location and waste type. It uses data fetched from an external backend API.
+
+---
+
+## Features
+
+- Responsive React UI with skip cards and detailed selection  
+- Step-based checkout progress bar  
+- Sort and filter skip bins  
+- Serverless API proxy to bypass CORS issues  
+- Mobile-first design with sticky headers and fixed footers  
+- Light and Dark mode support with automatic theme switching  
+- Skeleton loading components for improved perceived performance during data fetch  
+- Data fetching and caching powered by React Query for efficient state management  
+- Application state managed via React Context API for clean and scalable data flow  
+
+---
+
+## Tech Stack
+
+- **Frontend:** React, TypeScript, Tailwind CSS, Framer Motion  
+- **Deployment:** Vercel  
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14+ recommended)  
+- npm or yarn  
+- Vercel account for deployment  
+
+### Installation
+
+```bash
+git clone https://github.com/yourusername/skip-selector.git
+cd skip-selector
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Running Locally
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+### Project Structure
+
+```bash
+/src
+  /api              # API proxy serverless functions
+  /components       # React components (SkipCard, CheckoutSteps, etc.)
+  /hooks            # Custom React hooks
+  /interfaces       # TypeScript interfaces
+  /pages            # Page components
+  /contexts         # For React Contexts
+```
+--- 
+
+## Deployment
+
+This project is deployed on **Vercel**.
+
+
+## Links
+
+- **Live Demo:** [https://rem-waste-ashen.vercel.app/]
+- **GitHub Repository:** [https://github.com/abdelrahman-2513/rem-waste/]
+- **Sandbox:** [https://codesandbox.io/p/github/abdelrahman-2513/rem-waste/sandbox-branch]
+
