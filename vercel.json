@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/",
+            "destination": "https://app.wewantwaste.co.uk*"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}

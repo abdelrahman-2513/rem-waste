@@ -1,5 +1,5 @@
-import axios from "axios";
 import type { ISkipQuery } from "../interfaces/skip";
+import axiosInstance from "./axios";
 
 async function fetchSkips(query: ISkipQuery) {
   const params = new URLSearchParams();
@@ -7,7 +7,12 @@ async function fetchSkips(query: ISkipQuery) {
   if (query.postcode) params.append("postcode", query.postcode);
   if (query.area) params.append("area", query.area);
 
-  const response = await axios.get(`/api/proxy?postcode=NR32&area=Lowestoft`, { withCredentials: true });
+  const response = await axiosInstance.get(
+    `skips/by-location?${params.toString()}`,
+    {
+      withCredentials: true,
+    }
+  );
 
   return response.data;
 }
