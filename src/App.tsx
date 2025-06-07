@@ -7,16 +7,14 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 const queryClient = new QueryClient();
 function App() {
   return (
-
     <Router>
-    
-    <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
-   
-      <DarkModeProvider>
-        <AppRoutes />
+      <QueryClientProvider client={queryClient}>
+        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+
+        <DarkModeProvider>
+          <AppRoutes />
         </DarkModeProvider>
-        </QueryClientProvider>
+      </QueryClientProvider>
     </Router>
   );
 }
