@@ -11,9 +11,8 @@ A React application for skip bin selection that fully redesigns the original pag
 - [Tech Stack](#tech-stack)  
 - [Getting Started](#getting-started)  
 - [Project Structure](#project-structure)  
-- [API Proxy Setup](#api-proxy-setup)  
 - [Deployment](#deployment)  
-- [Known Issues](#known-issues)  
+- [Lniks](#links)  
 
 ---
 
