@@ -48,7 +48,7 @@ This project allows users to browse and select skip bins based on location and w
 
 ### Prerequisites
 
-- Node.js (v14+ recommended)  
+- Node.js (v18+ recommended)  
 - npm or yarn  
 - Vercel account for deployment  
 
@@ -58,6 +58,11 @@ This project allows users to browse and select skip bins based on location and w
 git clone https://github.com/abdelrahman-2513/rem-waste/
 cd skip-selector
 npm install
+```
+### Switch to branch using proxy locally(fetching from api)
+
+```bash
+git checkout sandbox-branch
 ```
 
 ### Running Locally
