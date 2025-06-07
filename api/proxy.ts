@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export default async function handler(req: any, res: any) {
+    console.log("from handle")
   const { postcode, area } = req.query;
 
   try {
