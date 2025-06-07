@@ -55,7 +55,7 @@ This project allows users to browse and select skip bins based on location and w
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/skip-selector.git
+git clone https://github.com/abdelrahman-2513/rem-waste/
 cd skip-selector
 npm install
 ```
