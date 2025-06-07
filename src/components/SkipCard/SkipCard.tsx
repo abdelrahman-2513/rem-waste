@@ -32,7 +32,7 @@ const SkipCard: React.FC<SkipCardProps> = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.03 }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
       className={`border-2 rounded-lg p-4 bg-white dark:bg-gray-800 text-black dark:text-white shadow-md cursor-pointer transition-all
         ${selected ? "border-green-500" : "border-gray-300 dark:border-gray-700"}`}
     >
