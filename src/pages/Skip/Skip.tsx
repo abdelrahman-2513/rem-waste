@@ -12,7 +12,8 @@ const SkipsPage: React.FC = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 
-  const selectedSkip = data?.find((skip: ISkip) => skip.id === selectedId) || null;
+  const selectedSkip =
+    data?.find((skip: ISkip) => skip.id === selectedId) || null;
   const currentStep = 3;
 
   const sortedData = useMemo(() => {
@@ -32,7 +33,7 @@ const SkipsPage: React.FC = () => {
       <div className="flex flex-col lg:flex-row gap-6 relative">
         <div className="lg:w-1/4 order-1 lg:order-2">
           <div className="lg:sticky lg:top-20 flex flex-col gap-4">
-            <div className="block lg:hidden">
+            <div className="block lg:hidden mx-auto">
               <CheckoutSteps currentStep={currentStep} />
             </div>
 
@@ -78,9 +79,7 @@ const SkipsPage: React.FC = () => {
               <select
                 id="sortOrder"
                 value={sortOrder}
-                onChange={(e) =>
-                  setSortOrder(e.target.value as "asc" | "desc")
-                }
+                onChange={(e) => setSortOrder(e.target.value as "asc" | "desc")}
                 className="border rounded px-2 py-1 text-sm dark:bg-gray-700 dark:text-white border-gray-300 dark:border-gray-700"
               >
                 <option value="asc">Low to High</option>
